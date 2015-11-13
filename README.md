@@ -2,6 +2,8 @@
 
 A highly modular, extensible API framework in Go (Golang).
 
+![](https://raw.githubusercontent.com/karan/unit/master/_dna.jpg?token=ADHGIXpzysS9hkZ0sEW0XDuvDLHM8Tk3ks5WT3XPwA%3D%3D)
+
 - [Architecture](#architecture)
 - [Installation](#installation)
 - [Accessing the API](#accessing-the-api)
