@@ -2,7 +2,18 @@
 
 A highly modular, extensible API framework in Go (Golang).
 
-### Installation
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Accessing the API](#accessing-the-api)
+- [Writing Units](#writing-units)
+
+## Architecture
+
+`unit` is designed to be a highly modular and extensible API. These modules or extensions are called *units* and live in `units/` folder. Each unit is part of the `package units`.
+
+Simply drop your units in the directory, and restart (rebuild) the API. `unit` discovers and links the API together automagically.
+
+## Installation
 
 - Install [Docker](https://docs.docker.com/installation/), [Docker Compose](https://docs.docker.com/compose/install/), and if using on a Mac, [Docker Machine](https://docs.docker.com/machine/install-machine/).
 - Clone this repo.
@@ -26,18 +37,12 @@ $ docker-machine ip unit
 $ docker-compose up
 ```
 
-### Accessing the API
+## Accessing the API
 
 If using Docker Machine, run `$ docker-machine ls` to find out the VM IP address.
 
-If your IP is `192.168.59.103`, load `192.168.59.103:5000` in the browser of the computer running docker to access the API.
+If your IP is `192.168.99.100`, load `192.168.99.100:5000` in the browser of the computer running docker to access the API.
 
-### Architecture
-
-`unit` is designed to be a highly modular and extensible API. These modules or extensions are called *units* and live in `units/` folder. Each unit is part of the `package units`.
-
-Simply drop your units in the directory, and restart (rebuild) the API. `unit` discovers and links the API together automagically.
-
-### Writing units
+## Writing units
 
 TODO: A short tutorial on how to write unitss
