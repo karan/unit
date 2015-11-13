@@ -1,5 +1,6 @@
 # unit
-Modular API in Golang
+
+A highly modular, extensible API framework in Go (Golang).
 
 ### Installation
 
@@ -7,9 +8,27 @@ Modular API in Golang
 - Clone this repo.
 - `docker-compose up`
 
+#### Mac & Docker Machine
+
+If you're using Docker Machine, follow these instructions for installation:
+
+```bash
+# Provision the docker engine
+$ docker-machine create --driver virtualbox unit
+
+# Set the environment
+$ eval "$(docker-machine env unit)"
+
+# See the IP address of the host
+$ docker-machine ip unit
+
+# Start the container
+$ docker-compose up
+```
+
 ### Accessing the API
 
-If using docker machine, run `$ docker-machine ls` to find out the VM IP address.
+If using Docker Machine, run `$ docker-machine ls` to find out the VM IP address.
 
 If your IP is `192.168.59.103`, load `192.168.59.103:5000` in the browser of the computer running docker to access the API.
 
