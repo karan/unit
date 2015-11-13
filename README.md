@@ -29,7 +29,7 @@ To get started, take a look the [installation](#installation) steps, and [units 
 
 ## Installation
 
-- `$ go get github.com/karan/unit`
+- `$ git clone git@github.com:karan/unit.git && cd unit/`
 - `$ docker-compose up`
 
 #### Mac & Docker Machine
