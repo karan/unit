@@ -58,11 +58,66 @@ If your IP is `192.168.99.100`, load `192.168.99.100:5000` in the browser of the
 
 ## Writing units
 
-TODO: A short tutorial on how to write unitss
+Every unit must import at least these two:
 
-#### Examples
+```go
+import "github.com/go-martini/martini"
+import "./../unit"
+```
 
-TODO: Example units
+The only thing needed after that is to register at least one group of routes like so:
+
+```go
+g := unit.Group(func(router martini.Router) {
+
+  // Use martini like you would
+  router.Get("/1", func() string {
+    return "v2 - 1!"
+  })
+
+  router.Get("/2", func() string {
+    return "v2 - 2!"
+  })
+
+})
+
+// Register with the following path
+g.Register("/v2")
+```
+
+The routes will then be available at `host/v2/1` and `host/v2/2`.
+
+The most beautiful thing here is that you use martini to setup the routes like you normally would. You have full access to all features of martini - you can render a static page, or send JSON or send XML response. `unit` does not really care.
+
+#### Example
+
+[`units/plugin1.go`](https://github.com/karan/unit/blob/master/units/plugin1.go)
+```go
+package units
+
+import (
+  "github.com/go-martini/martini"
+
+  "./../unit"
+)
+
+func init() {
+  g := unit.Group(func(router martini.Router) {
+
+    router.Get("/1", func() string {
+      return "v2 - 1!"
+    })
+
+    router.Get("/2", func() string {
+      return "v2 - 2!"
+    })
+
+  })
+
+  g.Register("/v2")
+}
+
+```
 
 ## Benchmark
 
