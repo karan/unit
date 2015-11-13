@@ -8,6 +8,7 @@ A highly modular, extensible API framework in Go (Golang).
 - [Installation](#installation)
 - [Accessing the API](#accessing-the-api)
 - [Writing Units](#writing-units)
+- [Benchmark](#benchmark)
 
 ## Architecture
 
@@ -48,3 +49,7 @@ If your IP is `192.168.99.100`, load `192.168.99.100:5000` in the browser of the
 ## Writing units
 
 TODO: A short tutorial on how to write unitss
+
+## Benchmark
+
+TODO: Add `wrk` benchmark
