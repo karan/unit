@@ -1,12 +1,11 @@
 package main
 
 import (
-    . "./app"
+	"./unit"
 
-    _ "./extensions"
+	_ "./units"
 )
 
-
 func main() {
-    App.Run()
+	unit.Run()
 }
