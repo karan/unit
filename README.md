@@ -121,4 +121,61 @@ func init() {
 
 ## Benchmark
 
-TODO: Add `wrk` benchmark
+`unit` is fast as a cheetah.
+
+```bash
+$ ab -n 1000 -c 20 http://192.168.99.100:5000/v1/1
+This is ApacheBench, Version 2.3 <$Revision: 1663405 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        192.168.99.100
+Server Port:            5000
+
+Document Path:          /v1/1
+Document Length:        7 bytes
+
+Concurrency Level:      20
+Time taken for tests:   2.450 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      123000 bytes
+HTML transferred:       7000 bytes
+Requests per second:    408.15 [#/sec] (mean)
+Time per request:       49.002 [ms] (mean)
+Time per request:       2.450 [ms] (mean, across all concurrent requests)
+Transfer rate:          49.03 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    4  63.8      0    1167
+Processing:     4   45  19.0     40     166
+Waiting:        3   42  17.9     39     164
+Total:          4   49  66.2     41    1213
+
+Percentage of the requests served within a certain time (ms)
+  50%     41
+  66%     47
+  75%     53
+  80%     59
+  90%     71
+  95%     82
+  98%     97
+  99%    113
+ 100%   1213 (longest request)
+```
