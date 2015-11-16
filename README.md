@@ -65,7 +65,7 @@ import "github.com/go-martini/martini"
 import "./../unit"
 ```
 
-For any third-party imports, mark them with the "//- unit-deps" comment so `unit` can discover them and install them for you.
+For any third-party imports, mark them with the `//- unit-deps` comment so `unit` can discover them and install them for you.
 
 Example:
 
