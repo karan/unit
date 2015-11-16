@@ -1,13 +1,18 @@
 package units
 
 import (
-  "github.com/go-martini/martini"
+  "github.com/go-martini/martini"  //- unit-dep
 
   "./../unit"
+
+  "github.com/martini-contrib/render" //- unit-dep
 )
 
 func init() {
   g := unit.Group(func(router martini.Router) {
+
+    // Suppress "imported and not used" warning
+    render.Renderer()
 
     router.Get("/1", func() string {
       return "v2 - 1!"

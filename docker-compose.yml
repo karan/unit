@@ -1,6 +1,6 @@
 unit:
   build: .
-  command: go run run.go
+  command: ./start
   ports:
     - "5000:5000"
   volumes:

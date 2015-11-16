@@ -9,7 +9,6 @@ type Group func(router martini.Router)
 
 // Register a router group
 func (g Group) Register(path string) {
-  println("register")
   m.Router.Group(path, g)
 }
 
@@ -18,7 +17,6 @@ func (g Group) Register(path string) {
 var m *martini.ClassicMartini
 
 func init() {
-  println("setup")
   m = martini.Classic()
 }
 

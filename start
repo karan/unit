@@ -1,0 +1,9 @@
+echo ~~~ unit ~~~
+
+echo Collecting third-party dependencies
+OUTPUT="$(go run deps.go)"
+echo Installing dependencies: $OUTPUT
+go get $OUTPUT
+
+echo Starting the server...
+go run run.go

@@ -65,6 +65,20 @@ import "github.com/go-martini/martini"
 import "./../unit"
 ```
 
+For any third-party imports, mark them with the "//- unit-deps" comment so `unit` can discover them and install them for you.
+
+Example:
+
+```go
+import (
+  "github.com/go-martini/martini"  //- unit-dep
+
+  "./../unit"
+
+  "github.com/martini-contrib/render" //- unit-dep
+)
+```
+
 The only thing needed after that is to register at least one group of routes like so:
 
 ```go

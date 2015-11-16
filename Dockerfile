@@ -21,7 +21,7 @@ RUN go get -u github.com/go-martini/martini
 RUN mkdir -p /src/unit/
 ADD . /src/unit/
 WORKDIR /src/unit/
-
+RUN chmod +x /src/unit/start
 
 # -----------------
 # Set the server
