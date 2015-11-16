@@ -1,7 +1,7 @@
 package units
 
 import (
-  "github.com/go-martini/martini"  //- unit-dep
+  "github.com/go-martini/martini"
 
   "./../unit"
 
