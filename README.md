@@ -2,13 +2,13 @@
 
 ![](https://raw.githubusercontent.com/karan/unit/master/_dna.jpg?token=ADHGIXpzysS9hkZ0sEW0XDuvDLHM8Tk3ks5WT3XPwA%3D%3D)
 
-A highly modular, fast API framework in Go backed by [martini](https://github.com/go-martini/martini), and distributed as a Docker container for easy installation and deployment.
+A highly **modular**, **fast** API framework in Go backed by [martini](https://github.com/go-martini/martini), and distributed as a **Docker** container for easy installation and deployment.
 
 `unit` is designed to be a highly modular and extensible API. These modules or extensions are called *units* and live in `units/` folder. Each unit is part of the `package units`.
 
 `units` are independent modules that can do anything you want them to do. Imagine having one that can draw an image, another that saves an image to s3, and another that notifies users - all exposed through your own HTTP API.
 
-Simply drop your `units` in the `units/` directory, and restart (rebuild) the API. `unit` discovers and links the API, and installs the necessary dependencies automagically.
+Simply drop your `units` in the `units/` directory, and restart (rebuild) the API. `unit` discovers and links the API, and **installs the necessary dependencies** automagically.
 
 To get started, take a look the [installation](#installation) steps, and [units docs](#writing-units).
 
