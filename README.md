@@ -194,4 +194,4 @@ Percentage of the requests served within a certain time (ms)
  100%   1213 (longest request)
 ```
 
-*Inspired by the slower, much less user-friendly [modapi](https://github.com/csu/modapi)*
+*Inspired by the awesome, super great [modapi](https://github.com/csu/modapi).*
